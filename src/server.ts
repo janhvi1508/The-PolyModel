@@ -99,7 +99,7 @@ async function getOpenAI(prompt: string): Promise<string> {
 async function getGroq(prompt: string): Promise<string> {
   try {
     const res = await groq.chat.completions.create({
-      model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-120b",
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: prompt },
